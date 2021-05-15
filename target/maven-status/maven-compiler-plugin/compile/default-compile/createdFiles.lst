@@ -1,0 +1,6 @@
+gg\maiko\modsuite\handler\ModSuiteHandler.class
+gg\maiko\modsuite\listener\SuiteListener.class
+gg\maiko\modsuite\utils\CC.class
+gg\maiko\modsuite\utils\ItemBuilder.class
+gg\maiko\modsuite\ModSuite.class
+gg\maiko\modsuite\command\SuiteCommand.class

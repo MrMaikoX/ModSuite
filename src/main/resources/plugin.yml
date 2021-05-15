@@ -1,0 +1,14 @@
+name: ModSuite
+main: gg.maiko.modsuite.ModSuite
+author: MaikoX
+version: 1.0
+commands:
+  staffmode:
+    aliases:
+      - sm
+      - modmode
+      - mm
+      - h
+      - staff
+      - mod
+      - modsuite
