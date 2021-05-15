@@ -2,6 +2,8 @@
 Staff Mode plugin just like Viper, Velt, MineHQ, and Lunar.
 Easy and simple
 
+Latest jar can be found by going to target -> ModSuite.jar
+
 # Bugs
 If any bugs found please report to them to me on discord or telegram to have a fix made.
 
