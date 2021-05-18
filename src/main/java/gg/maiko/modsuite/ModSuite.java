@@ -17,13 +17,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class ModSuite extends JavaPlugin {
 
     @Getter private static ModSuite instance;
-    private ModSuiteHandler suiteHandler;
 
     @Override
     public void onEnable() {
         instance = this;
 
-        suiteHandler = new ModSuiteHandler();
         getCommand("staffmode").setExecutor(new SuiteCommand());
         Bukkit.getPluginManager().registerEvents(new SuiteListener(), this);
         getLogger().info("ModSuite has been enabled.");
@@ -31,11 +29,9 @@ public class ModSuite extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // TODO: Make this better lookin
-        for(Player staff : Bukkit.getOnlinePlayers()) {
-            if(this.getSuiteHandler().inModMode(staff)) {
-                this.getSuiteHandler().toggleStaff(staff);
-            }
+        for (Player online : Bukkit.getServer().getOnlinePlayers()) {
+            if(ModSuiteHandler.inModMode(online))
+                ModSuiteHandler.getStaffMode().get(online).toggleStaff(online);
         }
     }
 }

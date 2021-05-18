@@ -1,6 +1,7 @@
 package gg.maiko.modsuite.command;
 
 import gg.maiko.modsuite.ModSuite;
+import gg.maiko.modsuite.handler.ModSuiteHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -21,14 +22,18 @@ public class SuiteCommand implements CommandExecutor {
         }
 
         Player player = (Player) sender;
+        ModSuiteHandler staffMode = ModSuiteHandler.getStaffMode().get(player);
+
         if(!player.hasPermission("modsuite.staff")) {
             player.sendMessage(ChatColor.RED + "No permission.");
             return true;
         }
 
-        boolean newState = !ModSuite.getInstance().getSuiteHandler().inModMode(player);
-        ModSuite.getInstance().getSuiteHandler().toggleStaff(player);
-        player.sendMessage(ChatColor.GOLD + "Staff Mode: " + (newState ? ChatColor.GREEN + "enabled" : ChatColor.RED + "disabled"));
+        if (ModSuiteHandler.inModMode(player)) {
+            staffMode.disableStaff(player);
+            return true;
+        }
+        ModSuiteHandler.getStaffMode().put(player, new ModSuiteHandler(player));
         return false;
     }
 }

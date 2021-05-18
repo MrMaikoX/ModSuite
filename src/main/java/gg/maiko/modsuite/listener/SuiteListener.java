@@ -10,13 +10,11 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.*;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
@@ -33,15 +31,15 @@ public class SuiteListener implements Listener {
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         if (player.hasPermission("modsuite.staff")) {
-            ModSuite.getInstance().getSuiteHandler().toggleStaff(player);
+            ModSuiteHandler.getStaffMode().put(player, new ModSuiteHandler(player));
         }
     }
 
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent e) {
         Player player = e.getPlayer();
-        if (ModSuite.getInstance().getSuiteHandler().inModMode(player)) {
-            ModSuite.getInstance().getSuiteHandler().toggleStaff(player);
+        if (ModSuiteHandler.inModMode(player)) {
+            ModSuiteHandler.getStaffMode().put(player, new ModSuiteHandler(player));
         }
     }
 
@@ -54,7 +52,7 @@ public class SuiteListener implements Listener {
             return;
         }
 
-        if (ModSuite.getInstance().getSuiteHandler().inModMode(player)) {
+        if (ModSuiteHandler.inModMode(player)) {
             e.setCancelled(true);
             player.sendMessage(ChatColor.RED + "You cannot break blocks in mod mode.");
 
@@ -69,7 +67,7 @@ public class SuiteListener implements Listener {
             return;
         }
 
-        if (ModSuite.getInstance().getSuiteHandler().inModMode(player)) {
+        if (ModSuiteHandler.inModMode(player)) {
             e.setCancelled(true);
             player.sendMessage(ChatColor.RED + "You cannot place blocks in mod mode.");
 
@@ -80,7 +78,7 @@ public class SuiteListener implements Listener {
     public void onAttack(EntityDamageByEntityEvent event) {
         if (event.getDamager() instanceof Player) {
             Player player = (Player) event.getDamager();
-            if (ModSuite.getInstance().getSuiteHandler().inModMode(player)) {
+            if (ModSuiteHandler.inModMode(player)) {
                 event.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "You cannot do this while in mod mode.");
             }
@@ -89,17 +87,17 @@ public class SuiteListener implements Listener {
 
     @EventHandler(ignoreCancelled = true)
     public void onPlayerPickupItem(PlayerPickupItemEvent event) {
-        event.setCancelled(ModSuite.getInstance().getSuiteHandler().inModMode(event.getPlayer()));
+        event.setCancelled(ModSuiteHandler.inModMode(event.getPlayer()));
     }
 
     @EventHandler(ignoreCancelled = true)
     public void onPlayerDropItem(PlayerDropItemEvent event) {
-        event.setCancelled(ModSuite.getInstance().getSuiteHandler().inModMode(event.getPlayer()));
+        event.setCancelled(ModSuiteHandler.inModMode(event.getPlayer()));
     }
 
     @EventHandler(priority = EventPriority.LOW)
     public void onPlayerDeath(PlayerDeathEvent e) {
-        if (ModSuite.getInstance().getSuiteHandler().inModMode(e.getEntity())) {
+        if (ModSuiteHandler.inModMode(e.getEntity())) {
             e.setDeathMessage(null);
             e.setKeepInventory(true);
             e.setKeepLevel(true);
@@ -111,7 +109,7 @@ public class SuiteListener implements Listener {
     public void onPlayerRightClick(PlayerInteractEntityEvent event) {
         Player player = event.getPlayer();
         Entity rightClicked = event.getRightClicked();
-        if (rightClicked instanceof Player && (ModSuite.getInstance().getSuiteHandler().inModMode(player))) {
+        if (rightClicked instanceof Player && (ModSuiteHandler.inModMode(player))) {
             ItemStack inHand = player.getItemInHand();
             // We will use performCommand until we make proper methods.
             if (inHand != null && inHand.getType() == Material.BOOK) {
@@ -127,10 +125,10 @@ public class SuiteListener implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
         Player p = event.getPlayer();
-        if (ModSuite.getInstance().getSuiteHandler().inModMode(p)) {
+        if (ModSuiteHandler.inModMode(p)) {
             if (p.getItemInHand().getType() == Material.WATCH && event.getAction().toString().contains("RIGHT")) {
                 event.setCancelled(true);
-                List<Player> onlinePlayers = Bukkit.getOnlinePlayers().stream().filter(other -> !ModSuiteHandler.staffMode.contains(other.getUniqueId())).collect(Collectors.toList());
+                List<Player> onlinePlayers = Bukkit.getOnlinePlayers().stream().filter(other -> !ModSuiteHandler.getStaffMode().containsKey(other)).collect(Collectors.toList());
                 Player tp;
 
                 if (onlinePlayers.isEmpty()) {

@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9f9fd23-5f80-4de8-adf9-f80a83fce552" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/ModSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/ModSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/command/SuiteCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/command/SuiteCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/handler/ModSuiteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/handler/ModSuiteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/listener/SuiteListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/listener/SuiteListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ModSuite.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-ModSuite.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-ModSuite.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,5 +81,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
