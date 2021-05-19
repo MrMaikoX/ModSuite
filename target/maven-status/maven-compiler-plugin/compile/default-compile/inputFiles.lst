@@ -1,10 +1,13 @@
 C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\listener\FreezeListener.java
-C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\utils\ItemBuilder.java
+C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\command\VanishCommand.java
 C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\ModSuite.java
-C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\utils\PlayerUtil.java
+C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\handler\VanishHandler.java
 C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\command\FreezeCommand.java
 C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\command\SuiteCommand.java
 C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\command\UnFreezeCommand.java
+C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\listener\VanishListener.java
 C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\utils\CC.java
 C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\handler\ModSuiteHandler.java
+C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\utils\ItemBuilder.java
+C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\utils\PlayerUtil.java
 C:\Users\Michael\Documents\GitHub\ModSuite\src\main\java\gg\maiko\modsuite\listener\SuiteListener.java

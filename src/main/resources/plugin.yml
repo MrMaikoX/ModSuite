@@ -19,3 +19,8 @@ commands:
   unfreeze:
     aliases:
       - unss
+  vanish:
+    aliases:
+      - v
+      - invisible
+      - invis

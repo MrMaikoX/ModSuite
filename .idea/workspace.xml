@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9f9fd23-5f80-4de8-adf9-f80a83fce552" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/command/FreezeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/command/UnFreezeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/listener/FreezeListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/utils/PlayerUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/command/VanishCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/handler/VanishHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/listener/VanishListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/ModSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/ModSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/command/SuiteCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/command/SuiteCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/listener/SuiteListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/listener/SuiteListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/handler/ModSuiteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/maiko/modsuite/handler/ModSuiteHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ModSuite.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ModSuite.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gg/maiko/modsuite/ModSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gg/maiko/modsuite/ModSuite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gg/maiko/modsuite/command/SuiteCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gg/maiko/modsuite/command/SuiteCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gg/maiko/modsuite/listener/SuiteListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gg/maiko/modsuite/listener/SuiteListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gg/maiko/modsuite/handler/ModSuiteHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gg/maiko/modsuite/handler/ModSuiteHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />

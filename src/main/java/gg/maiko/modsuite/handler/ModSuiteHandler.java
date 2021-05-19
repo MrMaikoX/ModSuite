@@ -35,6 +35,7 @@ public class ModSuiteHandler {
     public void toggleStaff(Player player) {
         storeAndClearInventory(player);
         player.getInventory().clear();
+        VanishHandler.getVanish().put(player, new VanishHandler(player));
         player.setGameMode(GameMode.CREATIVE);
         // Compass will work if you have worldedit on
         player.getInventory().setItem(0, new ItemBuilder(Material.COMPASS).setName("&6Compass").build());
@@ -50,6 +51,7 @@ public class ModSuiteHandler {
         player.getInventory().clear();
         restoreInventory(player);
         staffMode.remove(player);
+        VanishHandler.getVanish().remove(player);
         if (!player.hasPermission("modsuite.admin")) {
             player.setGameMode(GameMode.SURVIVAL);
         }

@@ -1,10 +1,13 @@
-gg\maiko\modsuite\handler\ModSuiteHandler.class
 gg\maiko\modsuite\listener\SuiteListener.class
-gg\maiko\modsuite\utils\CC.class
+gg\maiko\modsuite\handler\VanishHandler.class
 gg\maiko\modsuite\utils\ItemBuilder.class
-gg\maiko\modsuite\command\UnFreezeCommand.class
 gg\maiko\modsuite\ModSuite.class
 gg\maiko\modsuite\command\SuiteCommand.class
-gg\maiko\modsuite\utils\PlayerUtil.class
 gg\maiko\modsuite\command\FreezeCommand.class
 gg\maiko\modsuite\listener\FreezeListener.class
+gg\maiko\modsuite\handler\ModSuiteHandler.class
+gg\maiko\modsuite\utils\CC.class
+gg\maiko\modsuite\command\UnFreezeCommand.class
+gg\maiko\modsuite\utils\PlayerUtil.class
+gg\maiko\modsuite\listener\VanishListener.class
+gg\maiko\modsuite\command\VanishCommand.class
