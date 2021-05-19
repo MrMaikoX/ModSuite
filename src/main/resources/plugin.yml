@@ -12,3 +12,10 @@ commands:
       - staff
       - mod
       - modsuite
+  freeze:
+    aliases:
+      - screenshare
+      - ss
+  unfreeze:
+    aliases:
+      - unss

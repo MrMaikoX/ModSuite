@@ -33,6 +33,7 @@ public class SuiteCommand implements CommandExecutor {
             staffMode.disableStaff(player);
             return true;
         }
+
         ModSuiteHandler.getStaffMode().put(player, new ModSuiteHandler(player));
         return false;
     }

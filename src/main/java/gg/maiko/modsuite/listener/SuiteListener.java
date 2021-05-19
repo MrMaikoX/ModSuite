@@ -113,11 +113,11 @@ public class SuiteListener implements Listener {
             ItemStack inHand = player.getItemInHand();
             // We will use performCommand until we make proper methods.
             if (inHand != null && inHand.getType() == Material.BOOK) {
-                player.performCommand("invsee " + rightClicked.getName());
+                player.performCommand("invsee " + rightClicked);
             }
 
             if (inHand != null && inHand.getType() == Material.PACKED_ICE) {
-                player.performCommand("freeze " + rightClicked.getName());
+                player.performCommand("freeze " + rightClicked);
             }
         }
     }

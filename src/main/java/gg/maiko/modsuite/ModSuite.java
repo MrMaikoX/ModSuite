@@ -1,7 +1,10 @@
 package gg.maiko.modsuite;
 
+import gg.maiko.modsuite.command.FreezeCommand;
 import gg.maiko.modsuite.command.SuiteCommand;
+import gg.maiko.modsuite.command.UnFreezeCommand;
 import gg.maiko.modsuite.handler.ModSuiteHandler;
+import gg.maiko.modsuite.listener.FreezeListener;
 import gg.maiko.modsuite.listener.SuiteListener;
 import lombok.Getter;
 import org.bukkit.Bukkit;
@@ -23,7 +26,13 @@ public class ModSuite extends JavaPlugin {
         instance = this;
 
         getCommand("staffmode").setExecutor(new SuiteCommand());
+        getCommand("freeze").setExecutor(new FreezeCommand());
+        getCommand("unfreeze").setExecutor(new UnFreezeCommand());
+
+
         Bukkit.getPluginManager().registerEvents(new SuiteListener(), this);
+        Bukkit.getPluginManager().registerEvents(new FreezeListener(), this);
+
         getLogger().info("ModSuite has been enabled.");
     }
 
@@ -31,7 +40,7 @@ public class ModSuite extends JavaPlugin {
     public void onDisable() {
         for (Player online : Bukkit.getServer().getOnlinePlayers()) {
             if(ModSuiteHandler.inModMode(online))
-                ModSuiteHandler.getStaffMode().get(online).toggleStaff(online);
+                ModSuiteHandler.getStaffMode().get(online).disableStaff(online);
         }
     }
 }
